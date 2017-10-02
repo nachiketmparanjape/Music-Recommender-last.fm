@@ -1,5 +1,5 @@
 
-# Music and Artist Recommendation System
+# Recommendation System - Last.fm
 
 ## Introduction
 GitHub - https://github.com/nachiketmparanjape/Music-Recommender-last.fm
