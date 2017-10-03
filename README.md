@@ -2,7 +2,7 @@
 # Recommendation System - Last.fm
 
 ## Introduction
-GitHub - https://github.com/nachiketmparanjape/Music-Recommender-last.fm
+[GitHub](https://github.com/nachiketmparanjape/Music-Recommender-last.fm)
 
 ### Background of the Problem:
 For companies which have business in the domains such as media streaming, e-commerce, it is important to know what content its customers might like. Having a recommendation system can help the provide a personalized experience to a customer by making personalized recommendations.
@@ -142,6 +142,6 @@ While using Apache Spark, Sillhoutte Score is not a good metric as it requires c
 
 ![elbow_curve](https://user-images.githubusercontent.com/11637437/31146772-84d88e00-a83c-11e7-9842-d3763285a1f5.png)
 
-*Thus, ALS could be used to recommend new artists to an existing user, whereas we can use the clustering algorithm to give recommendations to new users with zero or little listening experience.
+*Thus, ALS could be used to recommend new artists to an existing user, whereas we can use the clustering algorithm to give recommendations to new users with zero or little listening experience.*
 
-Also, as a future scope for this project, we can also create multiple composite models using different linear combinations of these two models for different use-cases.*
+*Also, as a future scope for this project, we can also create multiple composite models using different linear combinations of these two models for different use-cases.*
