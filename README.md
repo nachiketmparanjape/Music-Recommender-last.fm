@@ -130,10 +130,16 @@ Plays variable is defined as number of times an artist has been played for a par
 4.  Tuned following parameters - rank, regularization parameter, alpha, iterations
 5.  Analyzed the performance using 5-fold cross validation and root-mean-squared value
 6.  Used the best parameters to train the full dataset
-7.  Used the trained model to predict top 20 artists for every user
+7.  Used the trained model to predict top 20 artists for every user
 
 ## K-means Clustering
 
 The user-user based collaborative filtering is not useful for a user who does not have any listening history. It is thus important to be able to make some predictions about their musical preferences, which could be done using information about the user such as their age, gender and country. This could be done by separating the rating information based on these criteria separately and then using rating-mean to find out the top artists for users who fit in the same criteria. Instead of doing that, I have used k-means clustering to cluster the data into an optimum number of clusters. I have then aggregated the rating information among the clusters (mean) to generate a list of top 20 artists for every user.
+
+### Number of Clusters (k)
+
+While using Apache Spark, Sillhoutte Score is not a good metric as it requires calculation of distance between all the datapoint that are present in the dataset which is impractical with millions of datapoints, which is usually the case with Spark. So, to draw the elbow curve, I used Within Set Sum of Squared Distances. It is sum of squares of the distances of every point from its cluster center. Using this information, I created an Elbow Curve and decided the optimum number of clusters to be 10 by qualitative observation. Here is what the chart looks like -
+
+![elbow_curve](https://user-images.githubusercontent.com/11637437/31146772-84d88e00-a83c-11e7-9842-d3763285a1f5.png)
 
 *Thus, ALS could be used to recommend new artists to an existing user, whereas we can use the clustering algorithm to give recommendations to new users with zero or little listening experience. We can also create multiple composite models using different linear combinations of these two models for different use-cases.*
